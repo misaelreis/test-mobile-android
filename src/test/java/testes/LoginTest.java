@@ -1,4 +1,4 @@
-package tests;
+package testes;
 
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.WebDriver;
@@ -21,8 +21,7 @@ public class LoginTest {
         capacidades.setCapability("udid","emulator-5554");
         capacidades.setCapability("appPackage", "com.lojinha");
         capacidades.setCapability("appActivity", "com.lojinha.ui.MainActivity");
-        capacidades.setCapability("app", "C:\\Users\\zaela\\Documents\\Estudos\\automacao-front-web\\" +
-                "automation-mobile-android\\src\\main\\resources\\lojinha-nativa.apk");
+        capacidades.setCapability("app", "C:\\src\\main\\resources\\lojinha-nativa.apk");
 
         this.app = new RemoteWebDriver(new URL("http://127.0.0.1:4723/wd/hub"), capacidades);
         this.app.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
